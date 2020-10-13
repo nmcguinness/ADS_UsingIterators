@@ -44,24 +44,7 @@ int main()
     demoGenericPrint();
 }
 
-void demoGenericPrint() {
-
-    //print that takes elements E
-    std::list<int> agesList = { 1, 2, 3, 4, 5, 6 };
-    print(agesList);
-
-    //print that print using iterators 
-    cout << endl;
-    cout << "Use print() to print using the iterators..." << endl;
-    print(agesList.begin(), agesList.end());
-
-    //print that print in REVERSE using iterators 
-    cout << endl;
-    cout << "Use print() to print in reverse by just changing the iterators..." << endl;
-    print(agesList.rbegin(), agesList.rend());
-}
-
-
+/// @brief Demos use of iterator related methods for the list
 void demoUsingListIterators(){
     std::list<int> agesList = { 1, 2, 3, 4, 5, 6 };
     //agesList.push_back(25); //remember we can use push_front, push_back to add values also
@@ -112,4 +95,22 @@ void demoUsingListIterators(){
     cout << *crIt << endl;
 
     //to do...size, clear, emplace, remove_if, sort, merge, reverse, splice
+}
+
+/// @brief Demos use of print methods that using generics and iterators
+void demoGenericPrint() {
+
+    //print that takes elements E
+    std::list<int> agesList = { 1, 2, 3, 4, 5, 6 };
+    print(agesList);
+
+    //print that print using iterators 
+    cout << endl;
+    cout << "Use print() to print using the iterators..." << endl;
+    print(agesList.begin(), agesList.end());
+
+    //print that print in REVERSE using iterators 
+    cout << endl;
+    cout << "Use print() to print in reverse by just changing the iterators..." << endl;
+    print(agesList.rbegin(), agesList.rend());
 }
