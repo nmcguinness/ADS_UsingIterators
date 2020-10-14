@@ -104,12 +104,12 @@ void demoGenericPrint() {
     std::list<int> agesList = { 1, 2, 3, 4, 5, 6 };
     print(agesList);
 
-    //print that print using iterators 
+    //print using iterators 
     cout << endl;
     cout << "Use print() to print using the iterators..." << endl;
     print(agesList.begin(), agesList.end());
 
-    //print that print in REVERSE using iterators 
+    //print in REVERSE using iterators 
     cout << endl;
     cout << "Use print() to print in reverse by just changing the iterators..." << endl;
     print(agesList.rbegin(), agesList.rend());
