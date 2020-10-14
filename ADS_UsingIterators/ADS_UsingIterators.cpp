@@ -49,6 +49,7 @@ void demoUsingListIterators(){
     std::list<int> agesList = { 1, 2, 3, 4, 5, 6 };
     //agesList.push_back(25); //remember we can use push_front, push_back to add values also
 
+    //printing without using an iterator
     for (int x : agesList)
         cout << x << endl;
 
@@ -60,12 +61,14 @@ void demoUsingListIterators(){
     cout << *it1 << endl; //2
 
     cout << endl;
+    //iterating through a list using begin and end
     for (std::list<int>::iterator it = agesList.begin();
                                     it != agesList.end(); it++) {
         cout << *it << endl; //2
     }
 
     cout << endl;
+    //reverse iterating through a list using begin and end
     std::list<int> yearList = { 2019, 2012, 1999, 1978, 1999 };
     auto it = yearList.end();
     while (it != yearList.begin()) {
@@ -81,7 +84,7 @@ void demoUsingListIterators(){
   
     cout << endl;
      //demo iterating through a list of ints using reverse_iterator
-    std::list<int>::reverse_iterator rIt = yearList.rend();
+    std::list<int>::reverse_iterator rIt = yearList.rend(); //rend() returns the same iterator position as begin()
     --rIt;
     cout << *rIt << endl;
      --rIt;
